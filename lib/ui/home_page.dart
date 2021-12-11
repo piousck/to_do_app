@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:to_do_app/services/theme_services.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({Key? key, required this.title}) : super(key: key);
@@ -37,6 +38,7 @@ class _MyHomePageState extends State<MyHomePage> {
     return AppBar(
       leading: GestureDetector(
         onTap: () {
+          ThemeService().swithTheme();
           print("Tapped");
         },
         child: Icon(Icons.nightlight_round_outlined),
